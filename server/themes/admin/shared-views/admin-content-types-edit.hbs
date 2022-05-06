@@ -1,0 +1,124 @@
+<div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card admin-content-type-edit">
+        <div class="card-header">
+          <i class="fa fa-align-justify edit-content-type"></i> Edit {{ data.raw.title }} ({{ data.raw.systemId }}) | Module: <a href='/admin/modules/edit/{{ data.raw.moduleSystemId }}'>{{ data.raw.moduleSystemId }}</a>
+        </div>
+
+
+      </div>
+
+    </div>
+    <!--/.col-->
+  </div>
+
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#fields" role="tab" aria-controls="home"
+        aria-selected="true">Fields</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="raw-tab" data-toggle="tab" href="#raw" role="tab" aria-controls="raw"
+        aria-selected="true">Raw</a>
+    </li>
+    <!-- <li class="nav-item">
+      <a class="nav-link " id="profile-tab" data-toggle="tab" href="#permissions" role="tab" aria-controls="profile"
+        aria-selected="false">Permissions</a>
+    </li> -->
+    <!-- <li class="nav-item">
+      <a class="nav-link " id="shortcode-tab" data-toggle="tab" href="#shortcode" role="tab" aria-controls="shortcode"
+        aria-selected="false">Shortcode</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " id="profile-tab" data-toggle="tab" href="#views" role="tab" aria-controls="profile"
+        aria-selected="false">Views</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="contact"
+        aria-selected="false">Settings</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#create" role="tab" aria-controls="contact"
+        aria-selected="false">Create Instance</a>
+    </li> -->
+  </ul>
+  <div class="tab-content" id="myTabContent">
+
+    <div class="tab-pane fade show active" id="fields" role="tabpanel" aria-labelledby="home-tab">
+
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <i class="fa fa-align-justify"></i> Manage Fields
+
+            </div>
+            <div class="card-body">
+
+              <div id='formBuilder'></div>
+
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-success pull-right" onclick="onContentTypeSave()">
+                Save Fields
+              </button>
+            </div>
+          </div>
+
+        </div>
+        <!--/.col-->
+      </div>
+
+
+    </div>
+    <div class="tab-pane fade show" id="raw" role="tabpanel" aria-labelledby="raw-tab">
+
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <i class="fa fa-align-justify"></i> Manage Fields
+
+          </div>
+          <div class="card-body">
+
+            <div id="editor-container">
+
+              <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+              <div id="jsoneditorRaw" style="width: 100%; height: 600px;"></div>
+
+            </div>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-success pull-right" onclick="onContentTypeRawSave()">
+              Save Json
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+    <div class="tab-pane fade show" id="shortcode" role="tabpanel" aria-labelledby="shortcode-tab">
+      <div class='shortcode'><span>Shortcode: </span>{{shortcode}}</div>
+    </div>
+    <div class="tab-pane fade show" id="views" role="tabpanel" aria-labelledby="profile-tab">
+      <app-content-type-edit-views></app-content-type-edit-views>
+    </div>
+    <div class="tab-pane fade show" id="permissions" role="tabpanel" aria-labelledby="profile-tab">
+      Permissions Here
+    </div>
+    <div class="tab-pane fade show" id="settings" role="tabpanel" aria-labelledby="contact-tab">
+      <app-content-type-edit-settings></app-content-type-edit-settings>
+    </div>
+    <div class="tab-pane fade show" id="create" role="tabpanel" aria-labelledby="home-tab">
+      <app-content-type-edit-create-instance></app-content-type-edit-create-instance>
+    </div>
+  </div>
+
+</div>

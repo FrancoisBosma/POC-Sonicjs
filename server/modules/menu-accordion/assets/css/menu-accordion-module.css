@@ -1,0 +1,33 @@
+/* Css File for Module: menu-accordion */
+/* nav.accordian-menu {
+  white-space: nowrap;
+}
+
+/* Only stick if you can fit */
+/* @media (min-height: 300px) {
+  nav.accordian-menu  {
+    position: sticky;
+    top: 0;
+  }
+} */
+
+.accordian-menu.sticky {
+  position: fixed;
+  top: 100px;
+  width: 100%;
+}
+
+.accordian-menu a.current :before, .accordian-menu a.current span :before {
+  content: "";
+  display: block;
+  background: url("/assets/img/chevron_right.svg") no-repeat;
+  width: 20px;
+  height: 16px;
+  float: left;
+  margin: 0 6px 0 0;
+}
+
+.accordian-menu{
+  height: calc(100vh - 100px);
+  overflow-y: scroll;
+}

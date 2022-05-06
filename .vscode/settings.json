@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.hbs": "html"
+      },
+      "files.exclude": {
+        "**/combined-*": true
+      }
+}
